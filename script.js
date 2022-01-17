@@ -1,6 +1,11 @@
-a = new Date();
+let a;
 let timeRightNow;
-timeRightNow = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
-// document.write(timeRightNow)
-DateForToday = a.toLocaleDateString();
-document.getElementById("time").innerHTML = timeRightNow + " & Date :" + DateForToday;
+let DateForToday;
+
+setInterval(() => {
+    a = new Date();
+    timeRightNow = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+    // document.write(timeRightNow)
+    DateForToday = a.toLocaleDateString();
+    document.getElementById("time").innerHTML = timeRightNow + " & Date :" + DateForToday;
+}, 1000);
